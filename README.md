@@ -3,13 +3,13 @@
   <a href="https://github.com/ambr0sial/nova"><img src="logo.png" alt="Nova" width="128" /></a>
 </p>
 <p align="center">
-  <strong>Nova</strong> – Your Gateway to Free Streaming
+  <strong>Novaflix</strong> – Your Gateway to Free Streaming
 </p>
 
 > **UPDATE ALERT**  
 > **NEW FEATURES AVAILABLE!**
 
-# Nova ☄
+# Novaflix ☄
 
 ## Overview
 
@@ -24,13 +24,13 @@ Nova seamlessly integrates with two key APIs:
 
 ## User-Friendly Interface
 
-Nova is designed with the user in mind. Its intuitive interface makes it easy to navigate through different genres, discover new movies, and start watching with just a few clicks.
+Novaflix is designed with the user in mind. Its intuitive interface makes it easy to navigate through different genres, discover new movies, and start watching with just a few clicks.
 
 ## Getting Started ✨
 
 ### Online Usage 🎉
 
-Explore Nova online with ease—no setup required. Just dive in and start watching!
+Explore Novaflix online with ease—no setup required. Just dive in and start watching!
 
 ### Offline Usage 💾
 
