@@ -54,16 +54,5 @@ To use Nova locally, follow these steps:
 
 ## Hosting 🌐
 
-You’re welcome to host Nova on your own server! Just be sure to give proper credit, either by linking to this repository or mentioning the original creators.
-
-## Community & Support 💬
-
-Join our Discord community to stay updated, give feedback, or ask for help:
-- [Nova Discord Server](https://discord.gg/YK62kpT5ex)
-
-## Contributing ❤
-
-Contributions are greatly appreciated! If you’d like to help improve Nova, feel free to submit a pull request.
-
-#### Created with ❤ by ambr0sial and fanlim.
+You’re welcome to host Nova on your own server!
 
