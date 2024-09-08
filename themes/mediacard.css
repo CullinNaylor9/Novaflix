@@ -1,0 +1,127 @@
+.media-card {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 1rem; /* Reduced padding for a more compact look */
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(0, 0, 0, 0.6)); /* Enhanced gradient contrast */
+}
+
+.media-card:hover {
+    transform: scale(1.05) rotateY(2deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7), 0 0 20px rgba(138, 43, 226, 0.6);
+    background-color: rgba(35, 35, 35, 0.95);
+}
+
+.media-card img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3) contrast(1.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.media-card .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.media-card:hover .title {
+    color: #ff5722;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+}
+
+.media-card .info-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.media-card .author,
+.media-card .type {
+    font-size: 1rem;
+    margin-bottom: 0.25rem; /* Reduced margin for better spacing */
+    color: #d0d0d0;
+}
+
+.media-card .author::before {
+    content: 'Author: ';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.media-card .type::before {
+    content: 'Type: ';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.media-card .rating {
+    display: flex;
+    align-items: center;
+    color: #f5c518;
+    transition: color 0.3s ease;
+    margin-bottom: 0.5rem; /* Reduced margin for better spacing */
+}
+
+.media-card .rating span {
+    font-size: 1.3rem;
+}
+
+.media-card .rating .vote-average {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.media-card .release-date {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.media-card:hover .release-date {
+    color: #e0e0e0;
+}
+
+.media-card .genre {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.media-card .genre span {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.media-card .genre::before {
+    content: 'Genre: ';
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 0.5rem;
+}

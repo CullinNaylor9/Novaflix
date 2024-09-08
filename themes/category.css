@@ -1,0 +1,94 @@
+/* Custom styling for rounded select element */
+#categorySelect {
+    appearance: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.6));
+    color: #ffffff;
+    border: 1px solid #374151;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Hide default dropdown arrow */
+#categorySelect::-ms-expand {
+    display: none;
+}
+
+/* Custom dropdown arrow */
+#categorySelect::after {
+    content: '▼';
+    font-size: 1rem;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Styling for the dropdown list */
+#categorySelect:focus {
+    border-color: #b83fc4;
+    box-shadow: 0 0 0 3px rgba(148, 33, 186, 0.4);
+}
+
+/* Custom dropdown menu */
+#categorySelect option {
+    background-color: #1f2937;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #374151;
+}
+
+/* Option hover effect */
+#categorySelect option:hover {
+    background-color: rgba(194, 99, 228, 0.4); /* Slightly highlighted on hover */
+}
+
+/* Option selected state */
+#categorySelect option:checked {
+    background-color: rgb(184, 63, 196); /* Highlighted background for selected */
+}
+
+/* Styling for dropdown container */
+#categorySelectContainer {
+    position: relative;
+    display: inline-block;
+}
+
+/* Custom dropdown styling for improved visibility */
+#categorySelectDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.6));
+    border-radius: 0 0 50px 50px;
+    border: 1px solid #374151;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    max-height: 200px; /* Adjust height to fit content */
+    overflow-y: auto; /* Scrollable if content exceeds max-height */
+    z-index: 10;
+    display: none; /* Initially hidden, show on focus */
+}
+
+/* Display dropdown on focus */
+#categorySelect:focus + #categorySelectDropdown {
+    display: block;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: none;
+}

@@ -1,0 +1,93 @@
+<div class="relative w-full sm:w-1/3 mb-6 sm:mb-0">
+    <!-- Poster with Enhanced Lighting Effect -->
+    <div class="relative w-full h-full">
+        <!-- Poster Background -->
+        <div class="absolute inset-0 bg-cover bg-center rounded-xl" style="background-image: url('https://image.tmdb.org/t/p/w500{{poster_path}}'); filter: blur(6px); background-color: rgba(0, 0, 0, 0.3);"></div>
+
+        <!-- Enhanced Lighting Effect -->
+        <div class="absolute inset-0 rounded-xl">
+            <div class="absolute inset-0 bg-gradient-radial from-blue-500/50 to-transparent opacity-90 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-80 pointer-events-none"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 p-6 bg-gradient-to-b from-gray-900/80 to-gray-900/90 rounded-xl shadow-2xl border border-gray-700">
+            <img id="poster" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title_or_name}}" class="rounded-lg shadow-2xl mb-4 max-w-full h-auto border-4 border-gray-800">
+            <div class="mt-4 space-y-4">
+                <!-- Language Select Dropdown -->
+                <div>
+                    <label for="languageSelect" class="block text-sm font-semibold text-gray-200">Select Language:</label>
+                    <select id="languageSelect" class="mt-1 block w-full bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-blue-500 transition duration-200 ease-in-out">
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+
+                <!-- Provider Select Dropdown -->
+                <div>
+                    <label for="providerSelect" class="block text-sm font-semibold text-gray-200 mt-2">Select Content Provider:</label>
+                    <select id="providerSelect" class="mt-1 block w-full bg-gray-800 text-white rounded-lg border border-gray-700 focus:border-blue-500 focus:ring-blue-500 transition duration-200 ease-in-out">
+                        <optgroup label="Best Providers no ads">
+                            <option value="vidlink">vidlink</option>
+                            <option value="vidlinkdub">vidlink - different languages</option>
+                            <option value="vidsrcnl">vidsrcnl</option>
+                            <option value="vidsrc.rip">vidsrc.rip</option>
+                        </optgroup>
+                        <optgroup label="Alternative Providers">
+                            <option value="vidsrcpro">VidSrcPro - Ads May Appear</option>
+                            <option value="vidsrc">VidSrc - Ads May Appear</option>
+                            <option value="autoembed">autoembed - Ads May Appear</option>
+                            <option value="nontonGo">NontonGo - Ads May Appear</option>
+                            <option value="vidsrcxyz">VidSrcXYZ - Ads May Appear</option>
+                            <option value="embedsoap">EmbedSoap - Ads May Appear</option>
+                            <option value="smashystream">SmashyStream - Ads May Appear</option>
+                            <option value="2embed">2Embed - Ads May Appear</option>
+                            <option value="moviesapi">moviesapi - decent provider</option>
+                            <option value="1vid1shar">1Vid1Shar - Ads May Appear</option>
+                            <option value="moviesapi">moviesapi - Ads May Appear</option>
+                        </optgroup>
+                        <optgroup label="Anime Providers">
+                            <option value="AdminHiHi">AdminHiHi - Dubbed Episodes (No Ads)</option>
+                            <option value="2anime">2Anime - Dub Only</option>
+                            <option value="anime">Anime - Subtitles Only</option>
+                            <option value="2animesub">2Anime - Subtitles Only</option>
+                        </optgroup>
+                        <option value="trailer">Trailer</option>
+                    </select>
+                    <p class="text-xs text-gray-400 mt-2">Note: All providers except vidlink, vidsrcnl, may include ads in their content.</p>
+                </div>
+            </div>
+            {{season_section}}
+        </div>
+    </div>
+</div>
+
+<div id="movieInfo" class="relative w-full sm:w-2/3 pl-6">
+    <h2 class="text-4xl font-extrabold text-white mb-3">{{title_or_name}}</h2>
+    <p class="text-lg text-gray-300 mb-4">{{release_date_or_first_air_date}}</p>
+    <p class="text-base text-gray-200 mb-6">{{overview}}</p>
+    <p class="text-sm text-gray-400 mb-4">Type: {{type}}</p>
+    {{ratings}}
+    {{popularity}}
+    {{quality}} <!-- Added Quality Information -->
+    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Cast</h3>
+    <div class="flex overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-purple-700 scrollbar-track-gray-800 space-x-4">
+        {{cast_list}}
+    </div>
+    <button id="playButton" class="mt-6 bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-110">
+        Play
+    </button>
+</div>
+
+<div id="videoPlayer" class="w-full h-full rounded-2xl overflow-hidden hidden relative bg-gray-800">
+    <div class="absolute inset-0 bg-cover bg-center rounded-2xl" style="
+        background-image: url('https://image.tmdb.org/t/p/w500{{poster_path}}');
+        opacity: 0.6;
+        filter: blur(10px);
+        background-blend-mode: overlay;
+        background-color: rgba(0, 0, 0, 0.6);
+    "></div>
+    <div class="relative z-10 h-full overflow-auto rounded-2xl p-4">
+        <!-- The iframe will be injected here by updateVideo function -->
+    </div>
+</div>

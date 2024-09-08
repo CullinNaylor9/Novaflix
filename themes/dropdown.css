@@ -1,0 +1,69 @@
+/* Enhanced dropdown styling */
+.dropdown {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.6));
+    border: 1px solid #374151;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Focus state for better visibility */
+.dropdown:focus {
+    outline: none;
+    border-color: #ff5722; /* Highlight border color */
+    background-color: rgba(35, 35, 35, 0.9);
+    color: #ffffff;
+}
+
+/* Dropdown options styling */
+.dropdown option {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #374151;
+    font-size: 1rem;
+}
+
+/* Option hover effect */
+.dropdown option:hover {
+    background-color: rgba(255, 87, 34, 0.3); /* Subtle highlight on hover */
+}
+
+/* Option selected state */
+.dropdown option:checked {
+    background-color: rgba(255, 87, 34, 0.4); /* Highlighted background for selected */
+}
+
+/* Grouping options */
+.dropdown optgroup {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    color: #b3b3b3;
+}
+
+/* Custom dropdown arrow */
+.dropdown::after {
+    content: '▼';
+    font-size: 0.9rem;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: none;
+}
