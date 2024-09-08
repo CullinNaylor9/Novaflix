@@ -39,7 +39,7 @@ To use Nova locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/fanlimgames/novafork
+   git clone [https://github.com/CullinNaylor9/Novaflix/]
    ```
 
 2. Enter the project directory:
