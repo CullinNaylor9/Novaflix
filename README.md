@@ -15,10 +15,6 @@
 
 Nova is a versatile streaming platform designed to bring you a diverse collection of movies right to your fingertips. Whether you're into the latest blockbusters or timeless classics, Nova has something for everyone.
 
-## Actively Maintained Fork
-
-This project is an actively maintained fork of the original Nova. It continually evolves with new ideas and features, ensuring that your viewing experience remains fresh and engaging.
-
 ## API Integrations
 
 Nova seamlessly integrates with two key APIs:
